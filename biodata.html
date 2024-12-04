@@ -41,28 +41,29 @@
         color: #bfa563;
       }
 
+      .divider {
+        height: 3px;
+        width: 100%;
+        display: block;
+        top: 0;
+        left: 0;
+        background-size: cover;
+        position: static;
+        background: linear-gradient(to right, #7d682f, #baa46c);
+      }
+
       /* Other existing footer styles */
     </style>
   </head>
+
   <body class="bg-gray text-gray-800">
     <!-- Header (Same as index.html) -->
-    <header
-      class="flex justify-between items-center p-4 md:px-8 lg:px-16 border-b"
-    >
+    <header class="flex justify-between items-center p-4 md:px-8 lg:px-16">
       <!-- Navigation Left -->
       <nav class="hidden md:flex space-x-4">
-        <a href="index.html" class="font-bold hover:text-blue-600 transition">
-          HOME
-        </a>
-        <a href="biodata.html" class="font-bold hover:text-blue-600 transition">
-          Biodata
-        </a>
-        <a
-          href="contact_us.html"
-          class="font-bold hover:text-blue-600 transition"
-        >
-          Contact Us
-        </a>
+        <a href="index.html" class="font-bold transition"> HOME </a>
+        <a href="biodata.html" class="font-bold transition"> Biodata </a>
+        <a href="contact_us.html" class="font-bold transition"> Contact Us </a>
       </nav>
 
       <!-- Mobile Menu Toggle -->
@@ -79,9 +80,7 @@
 
       <!-- Navigation Right -->
       <div class="hidden md:flex items-center space-x-4">
-        <a
-          href="favoriteQuotes.html"
-          class="font-bold hover:text-blue-600 transition"
+        <a href="favoriteQuotes.html" class="font-bold transition"
           >Favorite Quotes</a
         >
         <i class="fas fa-search"></i>
@@ -107,7 +106,7 @@
         <!-- Profile Image -->
         <div class="flex justify-center">
           <img
-            src="BerlyDjara.jpg"
+            src="Berly.jpg"
             alt="Profile Picture"
             class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full shadow-lg"
           />
@@ -185,24 +184,14 @@
     <img src="gradient-line.svg" alt="gradient_line" class="divider" />
 
     <!-- Footer (Same as index.html) -->
-    <footer class="bg-black-200 py-8">
-      <div
-        class="container mx-auto px-4 md:px-8 lg:px-16 grid md:grid-cols-3 gap-8"
-      >
-        <div>
-          <ul class="space-y-2">
-            <li>
-              <a href="#">Story of Azarine</a>
-            </li>
-            <li>
-              <a href="#">Be Our Reseller</a>
-            </li>
-            <li>
-              <a href="#">Beauty Journals</a>
-            </li>
-            <li><a href="#">Where To Buy</a></li>
-            <li><a href="#">Quiz</a></li>
-          </ul>
+    <footer class="bg-black py-8">
+      <div class="container mx-auto px-4 grid grid-cols-3 gap-4 items-center">
+        <!-- Kiri -->
+        <div class="text-white space-y-2 text-sm text-left">
+          <a href="#">Story of Azarine</a><br />
+          <a href="#">Be Our Reseller</a><br />
+          <a href="#">Beauty Journals</a><br />
+          <a href="#">Quiz</a>
         </div>
         <div class="flex justify-center items-center">
           <img
