@@ -1,108 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Azarine.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Biodata - Liberly Djara</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biodata - Azarine Cosmetics</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
     <style>
-        main p {
-            text-align: center;
-            margin: 15px auto;
-        }
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      footer {
+        background-color: #1c1c1c;
+        color: #fff;
+        padding: 2rem 0;
+      }
+
+      /* Footer Link Hover */
+      footer a:hover {
+        color: #bfa563;
+      }
+
+      /* Social Link Hover */
+      footer .fab:hover {
+        color: #bfa563;
+      }
+
+      /* Other existing footer styles */
     </style>
-</head>
+  </head>
+  <body class="bg-gray text-gray-800">
+    <!-- Header (Same as index.html) -->
+    <header
+      class="flex justify-between items-center p-4 md:px-8 lg:px-16 border-b"
+    >
+      <!-- Navigation Left -->
+      <nav class="hidden md:flex space-x-4">
+        <a href="index.html" class="font-bold hover:text-blue-600 transition">
+          HOME
+        </a>
+        <a href="biodata.html" class="font-bold hover:text-blue-600 transition">
+          Biodata
+        </a>
+        <a
+          href="contact_us.html"
+          class="font-bold hover:text-blue-600 transition"
+        >
+          Contact Us
+        </a>
+      </nav>
 
-<body>
-    <header>
-        <div class="nav-left">
-            <a href="index.html">HOME</a>
-            <a href="biodata.html">Biodata</a>
-            <a href="contact_us.html">Contact Us</a>
-        </div>
+      <!-- Mobile Menu Toggle -->
+      <div class="md:hidden">
+        <button class="text-2xl" onclick="toggleMobileMenu()">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
 
-        <div class="Logo-brand">
-            <img src="AzarinLogo.webp" alt="Brand Logo">
-        </div> 
+      <!-- Logo -->
+      <div class="flex-grow flex justify-center">
+        <img src="AzarinLogo.webp" alt="Brand Logo" class="h-12 md:h-16" />
+      </div>
 
-        <div class="nav-right">
-            <strong><a href="favoriteQuotes.html">Favorite Quotes</a></strong>
-            <i class="fa fa-search"></i>
-            <img src="at.png" alt="at">
-            <select class="language-select">
-                <option>ID</option>
-                <option>EN</option>
-                <option>VN</option>
-                <option>MY</option>
-            </select>
-        </div>
+      <!-- Navigation Right -->
+      <div class="hidden md:flex items-center space-x-4">
+        <a
+          href="favoriteQuotes.html"
+          class="font-bold hover:text-blue-600 transition"
+          >Favorite Quotes</a
+        >
+        <i class="fas fa-search"></i>
+        <img src="at.png" alt="at" class="h-6" />
+        <select class="border rounded p-1 text-sm">
+          <option>ID</option>
+          <option>EN</option>
+          <option>VN</option>
+          <option>MY</option>
+        </select>
+      </div>
     </header>
 
-    <main class="biodata">
-        <section>
-            <h1 class="Judul">Welcome To My Personal Website</h1>
-            <article>
-                <figure>
-                    <img src="BerlyDjara.jpg" alt="Liberly Djara" width="400px" height="500">
-                </figure>
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 md:px-8 lg:px-16 py-8">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8">
+        My Biodata
+      </h1>
+      <br /><br />
 
-                <h2>Hello, My name is Liberly Djara</h2>
-                <p>I am a student at Indonesian Adventist University</p>
-                <p>Date of Birth: December 27, 2004</p>
-                <p>Place of Birth: Kupang, Indonesia</p>
-                <p>Gender: Female</p>
-                <p>Email Address: liberlydjara168@gmail.com</p>
-                <p>UNAI email address: 2381010@unai.edu</p>
-            </article> <br>
-            
-            <p>What I like about learning web development is the flexibility in designing
-                a website using HTML and CSS so I can create anything with creative designs.
-                But, there is also something I don't like, namely I have to make sure that
-                the appearance of the website I create is consistent on every device or browser
-                used, which takes a long time.</p>
-        </section>
+      <!-- Biodata Section -->
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <!-- Profile Image -->
+        <div class="flex justify-center">
+          <img
+            src="BerlyDjara.jpg"
+            alt="Profile Picture"
+            class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full shadow-lg"
+          />
+        </div>
+
+        <!-- Personal Information -->
+        <div class="space-y-4">
+          <div class="bg-gray-100 p-4 rounded-lg">
+            <h2 class="text-xl font-semibold mb-2">Personal Details</h2>
+            <ul class="space-y-2">
+              <li><strong>Name:</strong> Liberly Trily Christiani Djara</li>
+              <li><strong>Student ID (NIM):</strong> 2381010</li>
+              <li>
+                <strong>Faculty:</strong> Faculty of Information Technology
+                (FTI)
+              </li>
+              <li><strong>Study Program:</strong> Engineering Informatics</li>
+            </ul>
+          </div>
+
+          <!-- Hobbies and Skills -->
+          <div class="bg-gray-100 p-4 rounded-lg">
+            <h2 class="text-xl font-semibold mb-2">Hobbies</h2>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
+                >Reading</span
+              >
+              <span
+                class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
+                >Coding</span
+              >
+              <span
+                class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
+                >Photography</span
+              >
+            </div>
+          </div>
+
+          <div class="bg-gray-100 p-4 rounded-lg">
+            <h2 class="text-xl font-semibold mb-2">Skills</h2>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm"
+                >Web Development</span
+              >
+              <span
+                class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm"
+                >UI/UX Design</span
+              >
+              <span
+                class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm"
+                >Problem Solving</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial Section -->
+      <section class="mt-12 bg-gray-50 p-6 rounded-lg">
+        <h2 class="text-2xl font-semibold text-center mb-6">
+          My Learning Experience
+        </h2>
+        <blockquote class="text-center italic text-lg text-gray-700">
+          "Through this web development course, I've learned the importance of
+          responsive design, user experience, and the power of modern web
+          technologies like Tailwind CSS. The journey of creating this project
+          has been both challenging and incredibly rewarding, helping me grow
+          not just as a developer, but as a problem solver."
+        </blockquote>
+      </section>
     </main>
 
-    
-    <footer>
-        <div class="footer-container">
-            <div class="footer-column">
-                <ul>
-                    <li><a href="#">Story of Azarine</a></li>
-                    <li><a href="#">Be Our Reseller</a></li>
-                    <li><a href="#">Beauty Journals</a></li>
-                    <li><a href="#">Where To Buy</a></li>
-                    <li><a href="#">Quiz</a></li>
-                </ul>
-            </div>
+    <img src="gradient-line.svg" alt="gradient_line" class="divider" />
 
-            <div class="footer-logo">
-                <img src="Mask_Group__1___1___1_.webp" alt="Azarine Logo"> 
-            </div>
+    <!-- Footer (Same as index.html) -->
+    <footer class="bg-black-200 py-8">
+      <div
+        class="container mx-auto px-4 md:px-8 lg:px-16 grid md:grid-cols-3 gap-8"
+      >
+        <div>
+          <ul class="space-y-2">
+            <li>
+              <a href="#">Story of Azarine</a>
+            </li>
+            <li>
+              <a href="#">Be Our Reseller</a>
+            </li>
+            <li>
+              <a href="#">Beauty Journals</a>
+            </li>
+            <li><a href="#">Where To Buy</a></li>
+            <li><a href="#">Quiz</a></li>
+          </ul>
+        </div>
+        <div class="flex justify-center items-center">
+          <img
+            src="Mask_Group__1___1___1_.webp"
+            alt="Azarine Logo"
+            class="h-24"
+          />
+        </div>
+        <div>
+          <ul class="space-y-2 text-right">
+            <li>
+              <a href="#" class="hover:text-yellow-150">#THEPOWERINYOU</a>
+            </li>
+            <li>
+              <a href="https://fti.unai.edu/" class="hover:text-yellow-150">
+                FTI UNAI
+              </a>
+            </li>
+            <li>
+              <a href="https://unai.edu/" class="hover:text-yellow-150">
+                Situs Web UNAI
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://jurnal.unai.edu/index.php/teika"
+                class="hover:text-yellow-150"
+              >
+                Jurnal Teika
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
 
-            <div class="footer-column">
-                <ul>
-                    <li><a href="#">#THEPOWERINYOU</a></li>
-                    <li><a href="https://fti.unai.edu/">FTI UNAI</a></li>
-                    <li><a href="https://unai.edu/">Situs Web UNAI</a></li>
-                    <li><a href="https://jurnal.unai.edu/index.php/teika">Jurnal Teika</a></li>
-                </ul>
-            </div>
-        </div>
-    
-        <div class="social-links">
-            <i class="fa fa-facebook-f"></i>
-            <i class="fa fa-twitter"></i>
-            <i class="fa fa-instagram"></i>
-            <i class="fa fa-youtube"></i>
-            <i class="fa fa-tiktok"></i>
-        </div>
-    
-        <div class="footer-bottom">
-            <p>Copyright © 2024 Azarine Cosmetic, Privacy & Terms</p>
-            <p>Web Design & Development by LiberlyDjara</p>
-        </div>
+      <!-- Social Links -->
+      <div class="flex justify-center space-x-6 mt-8 text-2xl">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="text-center mt-8 text-sm">
+        <p>Copyright © 2024 Azarine Cosmetic, Privacy & Terms</p>
+        <p>Web Design & Development by LiberlyDjara.</p>
+      </div>
     </footer>
-</body>
+
+    <!-- Mobile Menu Script -->
+    <script>
+      function toggleMobileMenu() {
+        const mobileMenu = document.getElementById("mobile-menu");
+        mobileMenu.classList.toggle("hidden");
+      }
+    </script>
+  </body>
 </html>
