@@ -5,22 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Azarine Cosmetics - Home</title>
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
 
-    <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
     <style>
@@ -45,12 +41,10 @@
         padding: 2rem 0;
       }
 
-      /* Footer Link Hover */
       footer a:hover {
         color: #bfa563;
       }
 
-      /* Social Link Hover */
       footer .fab:hover {
         color: #bfa563;
       }
@@ -65,38 +59,50 @@
         position: static;
         background: linear-gradient(to right, #7d682f, #baa46c);
       }
+
+      @keyframes pulseAnimation {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1.2);
+        }
+      }
+
+      .pulse-animate {
+        animation: pulseAnimation 2.3s alternate infinite ease-in;
+        display: block;
+        height: auto;
+        margin-bottom: 3rem;
+      }
     </style>
   </head>
   <body class="font-sans bg-white text-gray-900">
-    <!-- Header Navigation -->
     <header class="flex justify-between items-center p-4 md:px-8 lg:px-16">
-      <!-- Navigation Left -->
       <nav class="hidden md:flex space-x-4">
         <a href="index.html" class="font-bold transition"> HOME </a>
         <a href="biodata.html" class="font-bold transition"> Biodata </a>
         <a href="contact_us.html" class="font-bold transition"> Contact Us </a>
       </nav>
 
-      <!-- Mobile Menu Toggle -->
       <div class="md:hidden">
         <button class="text-2xl" onclick="toggleMobileMenu()">
           <i class="fas fa-bars"></i>
         </button>
       </div>
 
-      <!-- Logo -->
       <div class="flex-grow flex justify-center">
         <img src="AzarinLogo.webp" alt="Brand Logo" class="h-22 md:h-8" />
       </div>
 
-      <!-- Navigation Right -->
       <div class="hidden md:flex items-center space-x-4">
-        <a href="favoriteQuotes.html" class="font-bold transition"
-          >Favorite Quotes</a
-        >
+        <a href="favoriteQuotes.html" class="font-bold"> Favorite Quotes </a>
         <i class="fas fa-search"></i>
         <img src="at.png" alt="at" class="h-6" />
-        <select class="border rounded p-1 text-sm">
+        <select class="text-sm">
           <option>ID</option>
           <option>EN</option>
           <option>VN</option>
@@ -105,15 +111,18 @@
       </div>
     </header>
 
-    <!-- Main Content -->
     <main class="container mx-auto px-9 py-20">
       <h1 class="text-5xl font-bold text-center mb-6 font-serif">
         Story of Azarine
       </h1>
       <br /><br />
 
-      <blockquote class="text-3xl font-bold italic text-center mb-8 text-black">
-        Healthy skin is the ultimate reflection of overall wellness.
+      <blockquote>
+        <p
+          class="text-3xl font-bold italic text-center mb-8 text-black font-size 20px"
+        >
+          Healthy skin is the ultimate reflection of overall wellness.
+        </p>
       </blockquote>
 
       <div class="max-w-4xl mx-auto space-y-6">
@@ -141,7 +150,6 @@
       </div>
     </main>
 
-    <!-- Video Section -->
     <section class="container mx-auto my-8">
       <video autoplay muted loop playsinline class="w-full">
         <source src="Azarine-Cantik.mp4" type="video/mp4" />
@@ -180,7 +188,6 @@
     </div>
     <br /><br /><br /><br />
 
-    <!-- Certifications -->
     <section class="bg-gray-100 py-16">
       <div
         class="container mx-auto flex justify-center items-center space-x-12"
@@ -201,31 +208,20 @@
 
     <img src="gradient-line.svg" alt="gradient_line" class="divider" />
 
-    <!-- Footer -->
-    <footer class="bg-black-200 py-8">
-      <div
-        class="container mx-auto px-4 md:px-8 lg:px-16 grid md:grid-cols-3 gap-8"
-      >
-        <div>
-          <ul class="space-y-2">
-            <li>
-              <a href="#">Story of Azarine</a>
-            </li>
-            <li>
-              <a href="#">Be Our Reseller</a>
-            </li>
-            <li>
-              <a href="#">Beauty Journals</a>
-            </li>
-            <li><a href="#">Where To Buy</a></li>
-            <li><a href="#">Quiz</a></li>
-          </ul>
+    <footer class="bg-black py-8">
+      <div class="container mx-auto px-4 grid grid-cols-3 gap-4 items-center">
+        <!-- Kiri -->
+        <div class="text-white space-y-2 text-sm text-left">
+          <a href="#">Story of Azarine</a><br />
+          <a href="#">Be Our Reseller</a><br />
+          <a href="#">Beauty Journals</a><br />
+          <a href="#">Quiz</a>
         </div>
         <div class="flex justify-center items-center">
           <img
             src="Mask_Group__1___1___1_.webp"
             alt="Azarine Logo"
-            class="h-24"
+            class="h-8 pulse-animate"
           />
         </div>
         <div>
