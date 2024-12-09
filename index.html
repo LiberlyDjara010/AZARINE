@@ -145,8 +145,16 @@
           <div class="flex-1 overflow-y-auto px-4 py-6">
             <nav class="space-y-6">
               <div class="space-y-4">
-                <a href="index.html" class="block">HOME</a>
-                <a href="biodata.html" class="block">Biodata</a>
+                <a
+                  href="index.html"
+                  class="block text-lg font-bold hover:text-amber-700 transition duration-300"
+                  >HOME</a
+                >
+                <a
+                  href="biodata.html"
+                  class="block text-lg font-bold hover:text-amber-700 transition duration-300"
+                  >Biodata</a
+                >
                 <a
                   href="contact_us.html"
                   class="block text-lg font-bold hover:text-amber-700 transition duration-300"
@@ -230,8 +238,8 @@
       </h1>
       <br /><br />
 
-      <blockquote>
-        <p class="text-3xl font-bold italic text-center mb-8 text-black">
+      <blockquote class="mb-8">
+        <p class="text-3xl font-bold italic text-black max-w-4xl mx-auto">
           Healthy skin is the ultimate reflection of overall wellness.
         </p>
       </blockquote>
@@ -299,21 +307,31 @@
     </main>
     <br /><br /><br /><br />
 
-    <section class="bg-gray-100 py-16">
+    <section class="bg-gray-100 py-12 px-4">
       <div
-        class="container mx-auto flex justify-center items-center space-x-12"
+        class="container mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8 place-items-center max-w-4xl"
       >
-        <img
-          src="halal-01.png"
-          alt="Halal Indonesia"
-          class="h-40 object-contain"
-        />
-        <img
-          src="iso-kan.png"
-          alt="Quality ISO 9001"
-          class="h-40 object-contain"
-        />
-        <img src="cpkb.png" alt="Badan POM RI" class="h-40 object-contain" />
+        <div class="flex justify-center">
+          <img
+            src="halal-01.png"
+            alt="Halal Indonesia"
+            class="h-24 sm:h-40 object-contain block"
+          />
+        </div>
+        <div class="flex justify-center">
+          <img
+            src="iso-kan.png"
+            alt="Quality ISO 9001"
+            class="h-24 sm:h-40 object-contain block"
+          />
+        </div>
+        <div class="flex justify-center">
+          <img
+            src="cpkb.png"
+            alt="Badan POM RI"
+            class="h-24 sm:h-40 object-contain block"
+          />
+        </div>
       </div>
     </section>
 
