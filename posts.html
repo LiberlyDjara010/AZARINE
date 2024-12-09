@@ -18,6 +18,11 @@
     />
 
     <style>
+      header {
+        justify-content: space-between;
+        font-size: 21px;
+        padding: 15px 40px;
+      }
       @keyframes pulseAnimation {
         0% {
           transform: scale(1);
@@ -60,66 +65,59 @@
     </style>
   </head>
   <body class="font-sans bg-gray-50 text-gray-900">
-    <!-- Header Section with Mobile Navigation -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
-          <!-- Desktop Navigation -->
           <nav class="hidden md:flex space-x-8">
             <a
               href="index.html"
-              class="font-bold hover:text-amber-700 transition duration-300 transform hover:scale-105"
-              >HOME</a
+              class="font-bold hover:text-amber-700 transition duration-300"
             >
+              HOME
+            </a>
             <a
               href="biodata.html"
-              class="font-bold hover:text-amber-700 transition duration-300 transform hover:scale-105"
-              >Biodata</a
+              class="font-bold hover:text-amber-700 transition duration-300"
             >
+              Biodata
+            </a>
             <a
               href="contact_us.html"
-              class="font-bold hover:text-amber-700 transition duration-300 transform hover:scale-105"
-              >Contact Us</a
+              class="font-bold hover:text-amber-700 transition duration-300"
             >
+              Contact Us
+            </a>
           </nav>
 
-          <!-- Mobile Menu Toggle -->
           <div class="md:hidden">
-            <button
-              id="mobileMenuToggle"
-              class="text-2xl p-2 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-amber-500"
-            >
+            <button class="text-2xl p-2 rounded-md hover:bg-gray-100">
               <i class="fas fa-bars"></i>
             </button>
           </div>
 
-          <!-- Logo -->
           <div class="flex-shrink-0 flex items-center">
             <img src="AzarinLogo.webp" alt="Brand Logo" class="h-8 w-auto" />
           </div>
 
-          <!-- Desktop Right Navigation -->
           <div class="hidden md:flex items-center space-x-6">
             <a
               href="favoriteQuotes.html"
-              class="font-bold hover:text-amber-700 transition duration-300 transform hover:scale-105"
-              >Favorite Quotes</a
+              class="font-bold hover:text-amber-700 transition duration-300"
             >
+              Favorite Quotes
+            </a>
+
             <a
               href="posts.html"
-              class="font-bold hover:text-amber-700 transition duration-300 transform hover:scale-105"
-              >Additional Page</a
+              class="font-bold hover:text-amber-700 transition duration-300"
             >
+              Additional Page
+            </a>
 
-            <i
-              class="fas fa-search hover:text-amber-700 cursor-pointer transition transform hover:scale-110"
-            ></i>
-
+            <i class="fas fa-search hover:text-amber-700 cursor-pointer"></i>
             <img src="at.png" alt="at" class="h-6" />
-
             <select
-              id="languageSelector"
-              class="text-sm border-none focus:ring-2 focus:ring-amber-500 rounded-md transition transform hover:scale-105"
+              class="text-sm border-none focus:ring-2 focus:ring-amber-500 rounded-md"
             >
               <option>ID</option>
               <option>EN</option>
@@ -127,40 +125,6 @@
               <option>MY</option>
             </select>
           </div>
-        </div>
-
-        <!-- Mobile Menu (Hidden by Default) -->
-        <div
-          id="mobileMenu"
-          class="mobile-menu md:hidden fixed inset-x-0 top-16 bg-white shadow-lg transform -translate-x-full"
-        >
-          <nav class="px-4 py-6 space-y-4">
-            <a
-              href="index.html"
-              class="block py-2 px-4 hover:bg-amber-50 rounded-md"
-              >HOME</a
-            >
-            <a
-              href="biodata.html"
-              class="block py-2 px-4 hover:bg-amber-50 rounded-md"
-              >Biodata</a
-            >
-            <a
-              href="contact_us.html"
-              class="block py-2 px-4 hover:bg-amber-50 rounded-md"
-              >Contact Us</a
-            >
-            <a
-              href="favoriteQuotes.html"
-              class="block py-2 px-4 hover:bg-amber-50 rounded-md"
-              >Favorite Quotes</a
-            >
-            <a
-              href="posts.html"
-              class="block py-2 px-4 hover:bg-amber-50 rounded-md"
-              >Additional Page</a
-            >
-          </nav>
         </div>
       </div>
     </header>
@@ -215,26 +179,10 @@
       <div class="max-w-6xl mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
           <div class="text-white space-y-3 text-lg text-center md:text-left">
-            <a
-              href="#"
-              class="block hover:text-amber-500 transition duration-300 transform hover:scale-105"
-              >Story of Azarine</a
-            >
-            <a
-              href="#"
-              class="block hover:text-amber-500 transition duration-300 transform hover:scale-105"
-              >Be Our Reseller</a
-            >
-            <a
-              href="#"
-              class="block hover:text-amber-500 transition duration-300 transform hover:scale-105"
-              >Beauty Journals</a
-            >
-            <a
-              href="#"
-              class="block hover:text-amber-500 transition duration-300 transform hover:scale-105"
-              >Quiz</a
-            >
+            <a href="#" class="block hover:text-scale-500">Story of Azarine</a>
+            <a href="#" class="block hover:text-scale-500">Be Our Reseller</a>
+            <a href="#" class="block hover:text-scale-500">Beauty Journals</a>
+            <a href="#" class="block hover:text-scale-500">Quiz</a>
           </div>
 
           <div class="flex justify-center">
@@ -248,30 +196,26 @@
           <div class="text-white text-center md:text-right">
             <ul class="space-y-3">
               <li>
-                <a
-                  href="#"
-                  class="hover:text-amber-500 transition duration-300 transform hover:scale-105"
+                <a href="#" class="block hover:text-scale-500"
                   >#THEPOWERINYOU</a
                 >
               </li>
               <li>
                 <a
                   href="https://fti.unai.edu/"
-                  class="hover:text-amber-500 transition duration-300 transform hover:scale-105"
+                  class="block hover:text-scale-500"
                   >FTI UNAI</a
                 >
               </li>
               <li>
-                <a
-                  href="https://unai.edu/"
-                  class="hover:text-amber-500 transition duration-300 transform hover:scale-105"
+                <a href="https://unai.edu/" class="hblock hover:text-scale-500"
                   >Situs Web UNAI</a
                 >
               </li>
               <li>
                 <a
                   href="https://jurnal.unai.edu/index.php/teika"
-                  class="hover:text-amber-500 transition duration-300 transform hover:scale-105"
+                  class="block hover:text-scale-500"
                   >Jurnal Teika</a
                 >
               </li>
@@ -315,7 +259,6 @@
     </footer>
 
     <script>
-      // Mobile Menu Toggle
       const mobileMenuToggle = document.getElementById("mobileMenuToggle");
       const mobileMenu = document.getElementById("mobileMenu");
 
@@ -323,16 +266,13 @@
         mobileMenu.classList.toggle("-translate-x-full");
       });
 
-      // Language Selector
       const languageSelector = document.getElementById("languageSelector");
       languageSelector.addEventListener("change", (event) => {
         const selectedLanguage = event.target.value;
-        // Implement language switching logic here
+
         console.log(`Selected language: ${selectedLanguage}`);
-        // You might want to add functionality to change site language
       });
 
-      // Post Fetching
       async function fetchPost() {
         const postId = 10;
         const loading = document.getElementById("loading");

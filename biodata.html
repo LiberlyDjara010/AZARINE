@@ -5,16 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Biodata - Azarine Cosmetics</title>
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
 
-    <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
       rel="stylesheet"
@@ -37,12 +34,10 @@
         padding: 2rem 0;
       }
 
-      /* Footer Link Hover */
       footer a:hover {
         color: #bfa563;
       }
 
-      /* Social Link Hover */
       footer .fab:hover {
         color: #bfa563;
       }
@@ -77,12 +72,11 @@
         margin-bottom: 3rem;
       }
 
-      /* Other existing footer styles */
     </style>
   </head>
 
   <body class="bg-gray text-gray-800">
-    <!-- Header (Same as index.html) -->
+    
     <header class="bg-white shadow-sm sticky top-0 z-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
@@ -131,6 +125,7 @@
             >
               Additional Page
             </a>
+
             <i class="fas fa-search hover:text-amber-700 cursor-pointer"></i>
             <img src="at.png" alt="at" class="h-6" />
             <select
@@ -146,16 +141,14 @@
       </div>
     </header>
 
-    <!-- Main Content -->
     <main class="container mx-auto px-4 md:px-8 lg:px-16 py-8">
       <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8">
         My Biodata
       </h1>
       <br /><br />
 
-      <!-- Biodata Section -->
       <div class="grid md:grid-cols-2 gap-8 items-center">
-        <!-- Profile Image -->
+        
         <div class="flex justify-center">
           <img
             src="Berly.jpg"
@@ -164,7 +157,6 @@
           />
         </div>
 
-        <!-- Personal Information -->
         <div class="space-y-4">
           <div class="bg-gray-100 p-4 rounded-lg">
             <h2 class="text-xl font-semibold mb-2">Personal Details</h2>
@@ -179,7 +171,6 @@
             </ul>
           </div>
 
-          <!-- Hobbies and Skills -->
           <div class="bg-gray-100 p-4 rounded-lg">
             <h2 class="text-xl font-semibold mb-2">Hobbies</h2>
             <div class="flex flex-wrap gap-2">
@@ -218,7 +209,6 @@
         </div>
       </div>
 
-      <!-- Testimonial Section -->
       <section class="mt-12 bg-gray-50 p-6 rounded-lg">
         <h2 class="text-2xl font-semibold text-center mb-6">
           My Learning Experience
@@ -238,27 +228,40 @@
     <footer class="bg-black py-8">
       <div class="max-w-6xl mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-          <div class="text-white space-y-3 text-lg text-center md:text-left">
-            <a
-              href="#"
-              class="block hover:text-amber-500 transition duration-300 transform hover:scale-105"
-              >Story of Azarine</a
-            >
-            <a
-              href="#"
-              class="block hover:text-amber-500 transition duration-300 transform hover:scale-105"
-              >Be Our Reseller</a
-            >
-            <a
-              href="#"
-              class="block hover:text-amber-500 transition duration-300 transform hover:scale-105"
-              >Beauty Journals</a
-            >
-            <a
-              href="#"
-              class="block hover:text-amber-500 transition duration-300 transform hover:scale-105"
-              >Quiz</a
-            >
+          <div class="text-white text-center md:text-left">
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="transition duration-300 transform hover:scale-105"
+                  >Story of Azarine</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="transition duration-300 transform hover:scale-105"
+                  >Be Our Reseller</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="transition duration-300 transform hover:scale-105"
+                  >Beauty Journals</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="transition duration-300 transform hover:scale-105"
+                  >Quiz</a
+                >
+              </li>
+            </ul>
           </div>
 
           <div class="flex justify-center">
@@ -274,28 +277,28 @@
               <li>
                 <a
                   href="#"
-                  class="hover:text-amber-500 transition duration-300 transform hover:scale-105"
+                  class="transition duration-300 transform hover:scale-105"
                   >#THEPOWERINYOU</a
                 >
               </li>
               <li>
                 <a
                   href="https://fti.unai.edu/"
-                  class="hover:text-amber-500 transition duration-300 transform hover:scale-105"
+                  class="transition duration-300 transform hover:scale-105"
                   >FTI UNAI</a
                 >
               </li>
               <li>
                 <a
                   href="https://unai.edu/"
-                  class="hover:text-amber-500 transition duration-300 transform hover:scale-105"
+                  class="transition duration-300 transform hover:scale-105"
                   >Situs Web UNAI</a
                 >
               </li>
               <li>
                 <a
                   href="https://jurnal.unai.edu/index.php/teika"
-                  class="hover:text-amber-500 transition duration-300 transform hover:scale-105"
+                  class="transition duration-300 transform hover:scale-105"
                   >Jurnal Teika</a
                 >
               </li>
@@ -337,5 +340,4 @@
         </div>
       </div>
     </footer>
-  </body>
 </html>

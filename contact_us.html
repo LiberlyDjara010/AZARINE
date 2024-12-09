@@ -4,16 +4,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us</title>
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
 
-    <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
       rel="stylesheet"
@@ -32,12 +29,10 @@
         padding: 2rem 0;
       }
 
-      /* Footer Link Hover */
       footer a:hover {
         color: #bfa563;
       }
 
-      /* Social Link Hover */
       footer .fab:hover {
         color: #bfa563;
       }
@@ -115,14 +110,14 @@
               >
                 Favorite Quotes
               </a>
-
+  
               <a
-              href="posts.html"
-              class="font-bold hover:text-amber-700 transition duration-300"
-            >
-              Additional Page
-            </a>
-
+                href="posts.html"
+                class="font-bold hover:text-amber-700 transition duration-300"
+              >
+                Additional Page
+              </a>
+  
               <i class="fas fa-search hover:text-amber-700 cursor-pointer"></i>
               <img src="at.png" alt="at" class="h-6" />
               <select
@@ -328,26 +323,22 @@
         event.preventDefault();
         let isValid = true;
 
-        // Reset semua error
         document.querySelectorAll('p[id$="Error"]').forEach((error) => {
           error.classList.add("hidden");
         });
 
-        // Validasi Nama Lengkap
         const fullName = document.getElementById("fullName").value.trim();
         if (!fullName) {
           document.getElementById("fullNameError").classList.remove("hidden");
           isValid = false;
         }
 
-        // Validasi NIM
         const studentId = document.getElementById("studentId").value.trim();
         if (!studentId) {
           document.getElementById("studentIdError").classList.remove("hidden");
           isValid = false;
         }
 
-        // Validasi Email
         const email = document.getElementById("email").value.trim();
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!email || !emailRegex.test(email)) {
@@ -355,14 +346,12 @@
           isValid = false;
         }
 
-        // Validasi Fakultas
         const faculty = document.getElementById("faculty").value;
         if (!faculty) {
           document.getElementById("facultyError").classList.remove("hidden");
           isValid = false;
         }
 
-        // Validasi Tanggal Lahir
         const dateOfBirth = document.getElementById("dateOfBirth").value;
         if (!dateOfBirth) {
           document
@@ -371,21 +360,18 @@
           isValid = false;
         }
 
-        // Validasi Jenis Kelamin
         const gender = document.querySelector('input[name="gender"]:checked');
         if (!gender) {
           document.getElementById("genderError").classList.remove("hidden");
           isValid = false;
         }
 
-        // Validasi Alamat
         const address = document.getElementById("address").value.trim();
         if (!address) {
           document.getElementById("addressError").classList.remove("hidden");
           isValid = false;
         }
 
-        // Validasi Nomor Telepon
         const phone = document.getElementById("phone").value.trim();
         const phoneRegex = /^[0-9]{10,13}$/;
         if (!phone || !phoneRegex.test(phone)) {
@@ -401,7 +387,6 @@
         return isValid;
       }
 
-      // Mencegah input selain angka pada nomor telepon
       document.getElementById("phone").addEventListener("input", function (e) {
         this.value = this.value.replace(/[^0-9]/g, "");
       });
@@ -413,22 +398,22 @@
         <div class="text-white space-y-3 text-lg text-center md:text-left">
           <a
             href="#"
-            class="block hover:text-amber-500 transition duration-300 transform hover:scale-105"
+            class="block hover:text-scale-500"
             >Story of Azarine</a
           >
           <a
             href="#"
-            class="block hover:text-amber-500 transition duration-300 transform hover:scale-105"
+            class="block hover:text-scale-500"
             >Be Our Reseller</a
           >
           <a
             href="#"
-            class="block hover:text-amber-500 transition duration-300 transform hover:scale-105"
+            class="block hover:text-scale-500"
             >Beauty Journals</a
           >
           <a
             href="#"
-            class="block hover:text-amber-500 transition duration-300 transform hover:scale-105"
+            class="block hover:text-scale-500"
             >Quiz</a
           >
         </div>
@@ -446,28 +431,28 @@
             <li>
               <a
                 href="#"
-                class="hover:text-amber-500 transition duration-300 transform hover:scale-105"
+                class="block hover:text-scale-500"
                 >#THEPOWERINYOU</a
               >
             </li>
             <li>
               <a
                 href="https://fti.unai.edu/"
-                class="hover:text-amber-500 transition duration-300 transform hover:scale-105"
+                class="block hover:text-scale-500"
                 >FTI UNAI</a
               >
             </li>
             <li>
               <a
                 href="https://unai.edu/"
-                class="hover:text-amber-500 transition duration-300 transform hover:scale-105"
+                class="hblock hover:text-scale-500"
                 >Situs Web UNAI</a
               >
             </li>
             <li>
               <a
                 href="https://jurnal.unai.edu/index.php/teika"
-                class="hover:text-amber-500 transition duration-300 transform hover:scale-105"
+                class="block hover:text-scale-500"
                 >Jurnal Teika</a
               >
             </li>
