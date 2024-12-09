@@ -101,11 +101,11 @@
       </style>
     </head>
     <body class="font-sans bg-white text-gray-900">
-      <!-- Header -->
+      
       <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex justify-between items-center h-16">
-            <!-- Left Navigation -->
+           
             <nav class="hidden md:flex space-x-8">
               <a
                 href="index.html"
@@ -124,7 +124,6 @@
               >
             </nav>
   
-            <!-- Mobile Menu Button -->
             <div class="md:hidden absolute left-4">
               <button
                 id="mobile-menu-button"
@@ -134,14 +133,11 @@
               </button>
             </div>
   
-            <!-- Center Logo -->
             <div
               class="flex-shrink-0 flex items-center absolute left-1/2 transform -translate-x-1/2"
             >
               <img src="AzarinLogo.webp" alt="Brand Logo" class="h-8 w-auto" />
             </div>
-  
-            <!-- Right Navigation -->
             <div class="hidden md:flex items-center space-x-6">
               <a
                 href="favoriteQuotes.html"
@@ -169,13 +165,12 @@
           </div>
         </div>
   
-        <!-- Mobile Menu (Full Screen) -->
+    
         <div
           id="mobile-menu"
           class="md:hidden fixed inset-0 bg-white transform -translate-y-full transition-transform duration-300 ease-in-out z-50"
         >
           <div class="h-full flex flex-col">
-            <!-- Mobile Menu Header -->
             <div
               class="flex justify-between items-center px-4 py-4 border-b relative"
             >
@@ -190,11 +185,8 @@
               </div>
             </div>
   
-            <!-- Rest of the mobile menu content remains the same as in the original file -->
-            <!-- Mobile Menu Content -->
             <div class="flex-1 overflow-y-auto px-4 py-6">
               <nav class="space-y-6">
-                <!-- Left Navigation Items -->
                 <div class="space-y-4">
                   <a
                     href="index.html"
@@ -212,11 +204,8 @@
                     >Contact Us</a
                   >
                 </div>
-  
-                <!-- Divider -->
                 <div class="h-px bg-gray-200 my-6"></div>
   
-                <!-- Right Navigation Items -->
                 <div class="space-y-4">
                   <a
                     href="favoriteQuotes.html"
@@ -230,7 +219,6 @@
                   >
                 </div>
   
-                <!-- Search and Language -->
                 <div class="space-y-6 mt-8">
                   <div class="flex items-center space-x-4">
                     <i
@@ -255,31 +243,26 @@
       </header>
   
       <script>
-        // Mobile menu functionality
         const mobileMenuButton = document.getElementById("mobile-menu-button");
         const mobileMenuClose = document.getElementById("mobile-menu-close");
         const mobileMenu = document.getElementById("mobile-menu");
         const menuIcon = mobileMenuButton.querySelector("i");
   
-        // Function to open menu
         const openMenu = () => {
           mobileMenu.classList.remove("-translate-y-full");
           mobileMenu.classList.add("translate-y-0");
-          document.body.style.overflow = "hidden"; // Prevent background scrolling
+          document.body.style.overflow = "hidden"; 
         };
   
-        // Function to close menu
         const closeMenu = () => {
           mobileMenu.classList.remove("translate-y-0");
           mobileMenu.classList.add("-translate-y-full");
-          document.body.style.overflow = ""; // Restore scrolling
+          document.body.style.overflow = ""; 
         };
   
-        // Event listeners
         mobileMenuButton.addEventListener("click", openMenu);
         mobileMenuClose.addEventListener("click", closeMenu);
   
-        // Close menu when clicking outside
         document.addEventListener("click", (event) => {
           if (
             !mobileMenu.contains(event.target) &&
@@ -291,9 +274,8 @@
         });
       </script>
 
-    <!-- Main Content -->
     <main class="max-w-7xl mx-auto px-4 py-12">
-      <!-- Page Title -->
+      
       <div class="text-center mb-12">
         <h1 class="text-4xl font-bold text-gray-800 mb-4 font-serif">
           Latest Posts
@@ -301,7 +283,7 @@
         <div class="divider h-1 w-24 mx-auto"></div>
       </div>
 
-      <!-- Loading State -->
+      
       <div id="loading" class="text-center py-12">
         <div
           class="inline-block animate-spin rounded-full h-12 w-12 border-4 border-amber-500 border-t-transparent"
@@ -309,7 +291,6 @@
         <p class="mt-4 text-gray-600">Loading post data...</p>
       </div>
 
-      <!-- Error State -->
       <div id="error" class="hidden text-center py-12">
         <div class="text-red-500 text-xl">
           <i class="fas fa-exclamation-circle mr-2"></i>
@@ -317,7 +298,6 @@
         </div>
       </div>
 
-      <!-- Post Container -->
       <div id="postContainer" class="hidden">
         <div
           class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition duration-300"
@@ -454,9 +434,8 @@
     </footer>
 
     <script>
-      // Function to fetch post data
       async function fetchPost() {
-        const postId = 10; // Using last two digits of NIM: 2381010
+        const postId = 10; 
         const loading = document.getElementById("loading");
         const error = document.getElementById("error");
         const postContainer = document.getElementById("postContainer");
@@ -473,12 +452,10 @@
 
           const post = await response.json();
 
-          // Update DOM elements with fetched data
           document.getElementById("postId").textContent = post.id;
           document.getElementById("postTitle").textContent = post.title;
           document.getElementById("postBody").textContent = post.body;
 
-          // Hide loading and show post container
           loading.classList.add("hidden");
           postContainer.classList.remove("hidden");
         } catch (err) {
@@ -488,7 +465,6 @@
         }
       }
 
-      // Fetch post when page loads
       document.addEventListener("DOMContentLoaded", fetchPost);
     </script>
   </body>
