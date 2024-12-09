@@ -23,6 +23,39 @@
         padding: 15px 40px;
       }
 
+      blockquote {
+        font-family: PlayfairDisplay;
+      }
+
+      h1 {
+        font-weight: bold;
+        color: #363636;
+      }
+
+      footer {
+        background-color: #1c1c1c;
+        color: #fff;
+        padding: 2rem 0;
+      }
+
+      footer a:hover {
+        color: #bfa563;
+      }
+
+      footer .fab:hover {
+        color: #bfa563;
+      }
+
+      .divider {
+        height: 3px;
+        width: 100%;
+        display: block;
+        top: 0;
+        left: 0;
+        background-size: cover;
+        position: static;
+        background: linear-gradient(to right, #7d682f, #baa46c);
+      }
       @keyframes pulseAnimation {
         0% {
           transform: scale(1);
@@ -37,67 +70,71 @@
 
       .pulse-animate {
         animation: pulseAnimation 2.3s alternate infinite ease-in;
-      }
-
-      .divider {
-        background: linear-gradient(to right, #7d682f, #baa46c);
+        display: block;
+        height: auto;
+        margin-bottom: 3rem;
       }
     </style>
   </head>
-  <body class="font-sans bg-gray-50 text-gray-900">
+  <body class="font-sans bg-white text-gray-900">
+    <!-- Header -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
+          <!-- Left Navigation -->
           <nav class="hidden md:flex space-x-8">
             <a
               href="index.html"
               class="font-bold hover:text-amber-700 transition duration-300"
+              >HOME</a
             >
-              HOME
-            </a>
             <a
               href="biodata.html"
               class="font-bold hover:text-amber-700 transition duration-300"
+              >Biodata</a
             >
-              Biodata
-            </a>
             <a
               href="contact_us.html"
               class="font-bold hover:text-amber-700 transition duration-300"
+              >Contact Us</a
             >
-              Contact Us
-            </a>
           </nav>
 
-          <div class="md:hidden">
-            <button class="text-2xl p-2 rounded-md hover:bg-gray-100">
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden absolute left-4">
+            <button
+              id="mobile-menu-button"
+              class="text-2xl p-2 rounded-md hover:bg-gray-100 focus:outline-none transition duration-300"
+            >
               <i class="fas fa-bars"></i>
             </button>
           </div>
 
-          <div class="flex-shrink-0 flex items-center">
+          <!-- Center Logo -->
+          <div
+            class="flex-shrink-0 flex items-center absolute left-1/2 transform -translate-x-1/2"
+          >
             <img src="AzarinLogo.webp" alt="Brand Logo" class="h-8 w-auto" />
           </div>
 
+          <!-- Right Navigation -->
           <div class="hidden md:flex items-center space-x-6">
             <a
               href="favoriteQuotes.html"
               class="font-bold hover:text-amber-700 transition duration-300"
+              >Favorite Quotes</a
             >
-              Favorite Quotes
-            </a>
-
             <a
               href="posts.html"
               class="font-bold hover:text-amber-700 transition duration-300"
+              >Additional Page</a
             >
-              Additional Page
-            </a>
-
-            <i class="fas fa-search hover:text-amber-700 cursor-pointer"></i>
+            <i
+              class="fas fa-search hover:text-amber-700 cursor-pointer transition duration-300"
+            ></i>
             <img src="at.png" alt="at" class="h-6" />
             <select
-              class="text-sm border-none focus:ring-2 focus:ring-amber-500 rounded-md"
+              class="text-sm border-none focus:ring-2 focus:ring-amber-500 rounded-md bg-transparent cursor-pointer"
             >
               <option>ID</option>
               <option>EN</option>
@@ -107,7 +144,128 @@
           </div>
         </div>
       </div>
+
+      <!-- Mobile Menu (Full Screen) -->
+      <div
+        id="mobile-menu"
+        class="md:hidden fixed inset-0 bg-white transform -translate-y-full transition-transform duration-300 ease-in-out z-50"
+      >
+        <div class="h-full flex flex-col">
+          <!-- Mobile Menu Header -->
+          <div
+            class="flex justify-between items-center px-4 py-4 border-b relative"
+          >
+            <button
+              id="mobile-menu-close"
+              class="absolute left-4 text-2xl p-2 rounded-md hover:bg-gray-100 focus:outline-none"
+            >
+              <i class="fas fa-times"></i>
+            </button>
+            <div class="w-full flex justify-center">
+              <img src="AzarinLogo.webp" alt="Brand Logo" class="h-8 w-auto" />
+            </div>
+          </div>
+
+          <!-- Rest of the mobile menu content remains the same as in the original file -->
+          <!-- Mobile Menu Content -->
+          <div class="flex-1 overflow-y-auto px-4 py-6">
+            <nav class="space-y-6">
+              <!-- Left Navigation Items -->
+              <div class="space-y-4">
+                <a
+                  href="index.html"
+                  class="block text-lg font-bold hover:text-amber-700 transition duration-300"
+                  >HOME</a
+                >
+                <a
+                  href="biodata.html"
+                  class="block text-lg font-bold hover:text-amber-700 transition duration-300"
+                  >Biodata</a
+                >
+                <a
+                  href="contact_us.html"
+                  class="block text-lg font-bold hover:text-amber-700 transition duration-300"
+                  >Contact Us</a
+                >
+              </div>
+
+              <!-- Divider -->
+              <div class="h-px bg-gray-200 my-6"></div>
+
+              <!-- Right Navigation Items -->
+              <div class="space-y-4">
+                <a
+                  href="favoriteQuotes.html"
+                  class="block text-lg font-bold hover:text-amber-700 transition duration-300"
+                  >Favorite Quotes</a
+                >
+                <a
+                  href="posts.html"
+                  class="block text-lg font-bold hover:text-amber-700 transition duration-300"
+                  >Additional Page</a
+                >
+              </div>
+
+              <!-- Search and Language -->
+              <div class="space-y-6 mt-8">
+                <div class="flex items-center space-x-4">
+                  <i
+                    class="fas fa-search text-xl hover:text-amber-700 cursor-pointer transition duration-300"
+                  ></i>
+                  <div class="h-6 w-px bg-gray-300"></div>
+                  <img src="at.png" alt="at" class="h-6" />
+                  <select
+                    class="text-lg border-none focus:ring-2 focus:ring-amber-500 rounded-md bg-transparent cursor-pointer"
+                  >
+                    <option>ID</option>
+                    <option>EN</option>
+                    <option>VN</option>
+                    <option>MY</option>
+                  </select>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
     </header>
+
+    <script>
+      // Mobile menu functionality
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenuClose = document.getElementById("mobile-menu-close");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const menuIcon = mobileMenuButton.querySelector("i");
+
+      // Function to open menu
+      const openMenu = () => {
+        mobileMenu.classList.remove("-translate-y-full");
+        mobileMenu.classList.add("translate-y-0");
+        document.body.style.overflow = "hidden"; // Prevent background scrolling
+      };
+
+      // Function to close menu
+      const closeMenu = () => {
+        mobileMenu.classList.remove("translate-y-0");
+        mobileMenu.classList.add("-translate-y-full");
+        document.body.style.overflow = ""; // Restore scrolling
+      };
+
+      // Event listeners
+      mobileMenuButton.addEventListener("click", openMenu);
+      mobileMenuClose.addEventListener("click", closeMenu);
+
+      // Close menu when clicking outside
+      document.addEventListener("click", (event) => {
+        if (
+          !mobileMenu.contains(event.target) &&
+          !mobileMenuButton.contains(event.target) &&
+          mobileMenu.classList.contains("translate-y-0")
+        ) {
+          closeMenu();
+        }
+      });
+    </script>
 
     <main class="max-w-4xl mx-auto px-4 py-12">
       <div class="text-center mb-12">
