@@ -18,11 +18,6 @@
     />
 
     <style>
-      header {
-        justify-content: space-between;
-        font-size: 21px;
-        padding: 15px 40px;
-      }
       @keyframes pulseAnimation {
         0% {
           transform: scale(1);
@@ -35,36 +30,17 @@
         }
       }
 
-      @keyframes slideIn {
-        from {
-          opacity: 0;
-          transform: translateY(-20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
       .pulse-animate {
         animation: pulseAnimation 2.3s alternate infinite ease-in;
-      }
-
-      .slide-in {
-        animation: slideIn 0.5s ease-out;
       }
 
       .divider {
         background: linear-gradient(to right, #7d682f, #baa46c);
       }
-
-      /* Mobile menu styles */
-      .mobile-menu {
-        transition: all 0.3s ease-in-out;
-      }
     </style>
   </head>
   <body class="font-sans bg-gray-50 text-gray-900">
+    <!-- Header Section -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
@@ -72,21 +48,18 @@
             <a
               href="index.html"
               class="font-bold hover:text-amber-700 transition duration-300"
+              >HOME</a
             >
-              HOME
-            </a>
             <a
               href="biodata.html"
               class="font-bold hover:text-amber-700 transition duration-300"
+              >Biodata</a
             >
-              Biodata
-            </a>
             <a
               href="contact_us.html"
               class="font-bold hover:text-amber-700 transition duration-300"
+              >Contact Us</a
             >
-              Contact Us
-            </a>
           </nav>
 
           <div class="md:hidden">
@@ -103,17 +76,8 @@
             <a
               href="favoriteQuotes.html"
               class="font-bold hover:text-amber-700 transition duration-300"
+              >Favorite Quotes</a
             >
-              Favorite Quotes
-            </a>
-
-            <a
-              href="posts.html"
-              class="font-bold hover:text-amber-700 transition duration-300"
-            >
-              Additional Page
-            </a>
-
             <i class="fas fa-search hover:text-amber-700 cursor-pointer"></i>
             <img src="at.png" alt="at" class="h-6" />
             <select
@@ -129,16 +93,17 @@
       </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 py-12">
+      <!-- Page Title -->
       <div class="text-center mb-12">
-        <h1
-          class="text-3xl md:text-4xl font-bold text-gray-800 mb-4 font-serif slide-in"
-        >
+        <h1 class="text-4xl font-bold text-gray-800 mb-4 font-serif">
           Latest Posts
         </h1>
         <div class="divider h-1 w-24 mx-auto"></div>
       </div>
 
+      <!-- Loading State -->
       <div id="loading" class="text-center py-12">
         <div
           class="inline-block animate-spin rounded-full h-12 w-12 border-4 border-amber-500 border-t-transparent"
@@ -146,6 +111,7 @@
         <p class="mt-4 text-gray-600">Loading post data...</p>
       </div>
 
+      <!-- Error State -->
       <div id="error" class="hidden text-center py-12">
         <div class="text-red-500 text-xl">
           <i class="fas fa-exclamation-circle mr-2"></i>
@@ -153,38 +119,55 @@
         </div>
       </div>
 
+      <!-- Post Container -->
       <div id="postContainer" class="hidden">
         <div
-          class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition duration-300 transform hover:scale-[1.02]"
+          class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition duration-300"
         >
           <div class="flex items-center gap-4 mb-6">
             <span
               class="bg-amber-100 text-amber-800 text-sm font-semibold px-3 py-1 rounded-full"
-            >
-              Post ID: <span id="postId"></span>
-            </span>
+              >Post ID: <span id="postId"></span
+            ></span>
             <div class="divider flex-grow h-px"></div>
           </div>
 
-          <h2
-            id="postTitle"
-            class="text-xl md:text-2xl font-bold text-gray-800 mb-4"
-          ></h2>
+          <h2 id="postTitle" class="text-2xl font-bold text-gray-800 mb-4"></h2>
+
           <p id="postBody" class="text-gray-600 leading-relaxed"></p>
         </div>
       </div>
     </main>
 
+    <!-- Footer Section -->
     <footer class="bg-black py-8">
       <div class="max-w-6xl mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-          <div class="text-white space-y-3 text-lg text-center md:text-left">
-            <a href="#" class="block hover:text-scale-500">Story of Azarine</a>
-            <a href="#" class="block hover:text-scale-500">Be Our Reseller</a>
-            <a href="#" class="block hover:text-scale-500">Beauty Journals</a>
-            <a href="#" class="block hover:text-scale-500">Quiz</a>
+          <!-- Left Column -->
+          <div class="text-white space-y-3 text-lg">
+            <a
+              href="#"
+              class="block hover:text-amber-500 transition duration-300"
+              >Story of Azarine</a
+            >
+            <a
+              href="#"
+              class="block hover:text-amber-500 transition duration-300"
+              >Be Our Reseller</a
+            >
+            <a
+              href="#"
+              class="block hover:text-amber-500 transition duration-300"
+              >Beauty Journals</a
+            >
+            <a
+              href="#"
+              class="block hover:text-amber-500 transition duration-300"
+              >Quiz</a
+            >
           </div>
 
+          <!-- Center Logo -->
           <div class="flex justify-center">
             <img
               src="Mask_Group__1___1___1_.webp"
@@ -193,29 +176,32 @@
             />
           </div>
 
-          <div class="text-white text-center md:text-right">
-            <ul class="space-y-3">
+          <!-- Right Column -->
+          <div class="text-white">
+            <ul class="space-y-3 text-right">
               <li>
-                <a href="#" class="block hover:text-scale-500"
+                <a href="#" class="hover:text-amber-500 transition duration-300"
                   >#THEPOWERINYOU</a
                 >
               </li>
               <li>
                 <a
                   href="https://fti.unai.edu/"
-                  class="block hover:text-scale-500"
+                  class="hover:text-amber-500 transition duration-300"
                   >FTI UNAI</a
                 >
               </li>
               <li>
-                <a href="https://unai.edu/" class="hblock hover:text-scale-500"
+                <a
+                  href="https://unai.edu/"
+                  class="hover:text-amber-500 transition duration-300"
                   >Situs Web UNAI</a
                 >
               </li>
               <li>
                 <a
                   href="https://jurnal.unai.edu/index.php/teika"
-                  class="block hover:text-scale-500"
+                  class="hover:text-amber-500 transition duration-300"
                   >Jurnal Teika</a
                 >
               </li>
@@ -223,34 +209,26 @@
           </div>
         </div>
 
+        <!-- Social Links -->
         <div class="flex justify-center space-x-8 mt-12 text-2xl text-white">
-          <a
-            href="#"
-            class="hover:text-amber-500 transition duration-300 transform hover:scale-125"
+          <a href="#" class="hover:text-amber-500 transition duration-300"
             ><i class="fab fa-facebook-f"></i
           ></a>
-          <a
-            href="#"
-            class="hover:text-amber-500 transition duration-300 transform hover:scale-125"
+          <a href="#" class="hover:text-amber-500 transition duration-300"
             ><i class="fab fa-twitter"></i
           ></a>
-          <a
-            href="#"
-            class="hover:text-amber-500 transition duration-300 transform hover:scale-125"
+          <a href="#" class="hover:text-amber-500 transition duration-300"
             ><i class="fab fa-instagram"></i
           ></a>
-          <a
-            href="#"
-            class="hover:text-amber-500 transition duration-300 transform hover:scale-125"
+          <a href="#" class="hover:text-amber-500 transition duration-300"
             ><i class="fab fa-youtube"></i
           ></a>
-          <a
-            href="#"
-            class="hover:text-amber-500 transition duration-300 transform hover:scale-125"
+          <a href="#" class="hover:text-amber-500 transition duration-300"
             ><i class="fab fa-tiktok"></i
           ></a>
         </div>
 
+        <!-- Footer Bottom -->
         <div class="text-center mt-12 text-white text-sm">
           <p class="mb-2">Copyright © 2024 Azarine Cosmetic, Privacy & Terms</p>
           <p>Web Design & Development by LiberlyDjara.</p>
@@ -259,22 +237,9 @@
     </footer>
 
     <script>
-      const mobileMenuToggle = document.getElementById("mobileMenuToggle");
-      const mobileMenu = document.getElementById("mobileMenu");
-
-      mobileMenuToggle.addEventListener("click", () => {
-        mobileMenu.classList.toggle("-translate-x-full");
-      });
-
-      const languageSelector = document.getElementById("languageSelector");
-      languageSelector.addEventListener("change", (event) => {
-        const selectedLanguage = event.target.value;
-
-        console.log(`Selected language: ${selectedLanguage}`);
-      });
-
+      // Function to fetch post data
       async function fetchPost() {
-        const postId = 10;
+        const postId = 10; // Using last two digits of NIM: 2381010
         const loading = document.getElementById("loading");
         const error = document.getElementById("error");
         const postContainer = document.getElementById("postContainer");
@@ -291,13 +256,14 @@
 
           const post = await response.json();
 
+          // Update DOM elements with fetched data
           document.getElementById("postId").textContent = post.id;
           document.getElementById("postTitle").textContent = post.title;
           document.getElementById("postBody").textContent = post.body;
 
+          // Hide loading and show post container
           loading.classList.add("hidden");
           postContainer.classList.remove("hidden");
-          postContainer.classList.add("slide-in");
         } catch (err) {
           console.error("Error:", err);
           loading.classList.add("hidden");
@@ -305,6 +271,7 @@
         }
       }
 
+      // Fetch post when page loads
       document.addEventListener("DOMContentLoaded", fetchPost);
     </script>
   </body>
