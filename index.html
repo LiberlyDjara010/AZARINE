@@ -59,7 +59,6 @@
         position: static;
         background: linear-gradient(to right, #7d682f, #baa46c);
       }
-
       @keyframes pulseAnimation {
         0% {
           transform: scale(1);
@@ -81,33 +80,67 @@
     </style>
   </head>
   <body class="font-sans bg-white text-gray-900">
-    <header class="flex justify-between items-center p-4 md:px-8 lg:px-16">
-      <nav class="hidden md:flex space-x-4">
-        <a href="index.html" class="font-bold transition"> HOME </a>
-        <a href="biodata.html" class="font-bold transition"> Biodata </a>
-        <a href="contact_us.html" class="font-bold transition"> Contact Us </a>
-      </nav>
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <nav class="hidden md:flex space-x-8">
+            <a
+              href="index.html"
+              class="font-bold hover:text-amber-700 transition duration-300"
+            >
+              HOME
+            </a>
+            <a
+              href="biodata.html"
+              class="font-bold hover:text-amber-700 transition duration-300"
+            >
+              Biodata
+            </a>
+            <a
+              href="contact_us.html"
+              class="font-bold hover:text-amber-700 transition duration-300"
+            >
+              Contact Us
+            </a>
+          </nav>
 
-      <div class="md:hidden">
-        <button class="text-2xl" onclick="toggleMobileMenu()">
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
+          <div class="md:hidden">
+            <button class="text-2xl p-2 rounded-md hover:bg-gray-100">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
 
-      <div class="flex-grow flex justify-center">
-        <img src="AzarinLogo.webp" alt="Brand Logo" class="h-22 md:h-8" />
-      </div>
+          <div class="flex-shrink-0 flex items-center">
+            <img src="AzarinLogo.webp" alt="Brand Logo" class="h-8 w-auto" />
+          </div>
 
-      <div class="hidden md:flex items-center space-x-4">
-        <a href="favoriteQuotes.html" class="font-bold"> Favorite Quotes </a>
-        <i class="fas fa-search"></i>
-        <img src="at.png" alt="at" class="h-6" />
-        <select class="text-sm">
-          <option>ID</option>
-          <option>EN</option>
-          <option>VN</option>
-          <option>MY</option>
-        </select>
+          <div class="hidden md:flex items-center space-x-6">
+            <a
+              href="favoriteQuotes.html"
+              class="font-bold hover:text-amber-700 transition duration-300"
+            >
+              Favorite Quotes
+            </a>
+
+            <a
+              href="posts.html"
+              class="font-bold hover:text-amber-700 transition duration-300"
+            >
+              Additional Page
+            </a>
+
+            <i class="fas fa-search hover:text-amber-700 cursor-pointer"></i>
+            <img src="at.png" alt="at" class="h-6" />
+            <select
+              class="text-sm border-none focus:ring-2 focus:ring-amber-500 rounded-md"
+            >
+              <option>ID</option>
+              <option>EN</option>
+              <option>VN</option>
+              <option>MY</option>
+            </select>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -118,9 +151,7 @@
       <br /><br />
 
       <blockquote>
-        <p
-          class="text-3xl font-bold italic text-center mb-8 text-black font-size 20px"
-        >
+        <p class="text-3xl font-bold italic text-center mb-8 text-black">
           Healthy skin is the ultimate reflection of overall wellness.
         </p>
       </blockquote>
@@ -209,61 +240,98 @@
     <img src="gradient-line.svg" alt="gradient_line" class="divider" />
 
     <footer class="bg-black py-8">
-      <div class="container mx-auto px-4 grid grid-cols-3 gap-4 items-center">
-        <!-- Kiri -->
-        <div class="text-white space-y-2 text-sm text-left">
-          <a href="#">Story of Azarine</a><br />
-          <a href="#">Be Our Reseller</a><br />
-          <a href="#">Beauty Journals</a><br />
-          <a href="#">Quiz</a>
-        </div>
-        <div class="flex justify-center items-center">
-          <img
-            src="Mask_Group__1___1___1_.webp"
-            alt="Azarine Logo"
-            class="h-8 pulse-animate"
-          />
-        </div>
-        <div>
-          <ul class="space-y-2 text-right">
-            <li>
-              <a href="#" class="hover:text-yellow-150">#THEPOWERINYOU</a>
-            </li>
-            <li>
-              <a href="https://fti.unai.edu/" class="hover:text-yellow-150">
-                FTI UNAI
-              </a>
-            </li>
-            <li>
-              <a href="https://unai.edu/" class="hover:text-yellow-150">
-                Situs Web UNAI
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://jurnal.unai.edu/index.php/teika"
-                class="hover:text-yellow-150"
-              >
-                Jurnal Teika
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+          <!-- Left Column -->
+          <div class="text-white space-y-3 text-lg">
+            <a
+              href="#"
+              class="block hover:text-amber-500 transition duration-300"
+              >Story of Azarine</a
+            >
+            <a
+              href="#"
+              class="block hover:text-amber-500 transition duration-300"
+              >Be Our Reseller</a
+            >
+            <a
+              href="#"
+              class="block hover:text-amber-500 transition duration-300"
+              >Beauty Journals</a
+            >
+            <a
+              href="#"
+              class="block hover:text-amber-500 transition duration-300"
+              >Quiz</a
+            >
+          </div>
 
-      <!-- Social Links -->
-      <div class="flex justify-center space-x-6 mt-8 text-2xl">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
-        <a href="#"><i class="fab fa-tiktok"></i></a>
-      </div>
+          <!-- Center Logo -->
+          <div class="flex justify-center">
+            <img
+              src="Mask_Group__1___1___1_.webp"
+              alt="Azarine Logo"
+              class="h-12 pulse-animate"
+            />
+          </div>
 
-      <!-- Footer Bottom -->
-      <div class="text-center mt-8 text-sm">
-        <p>Copyright © 2024 Azarine Cosmetic, Privacy & Terms</p>
-        <p>Web Design & Development by LiberlyDjara.</p>
+          <!-- Right Column -->
+          <div class="text-white">
+            <ul class="space-y-3 text-right">
+              <li>
+                <a href="#" class="hover:text-amber-500 transition duration-300"
+                  >#THEPOWERINYOU</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://fti.unai.edu/"
+                  class="hover:text-amber-500 transition duration-300"
+                  >FTI UNAI</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://unai.edu/"
+                  class="hover:text-amber-500 transition duration-300"
+                  >Situs Web UNAI</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://jurnal.unai.edu/index.php/teika"
+                  class="hover:text-amber-500 transition duration-300"
+                  >Jurnal Teika</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="flex justify-center space-x-8 mt-12 text-2xl text-white">
+          <a href="#" class="hover:text-amber-500 transition duration-300"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="#" class="hover:text-amber-500 transition duration-300"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="#" class="hover:text-amber-500 transition duration-300"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="#" class="hover:text-amber-500 transition duration-300"
+            ><i class="fab fa-youtube"></i
+          ></a>
+          <a href="#" class="hover:text-amber-500 transition duration-300"
+            ><i class="fab fa-tiktok"></i
+          ></a>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="text-center mt-12 text-white text-sm">
+          <p class="mb-2">Copyright © 2024 Azarine Cosmetic, Privacy & Terms</p>
+          <p>Web Design & Development by LiberlyDjara.</p>
+        </div>
       </div>
     </footer>
   </body>

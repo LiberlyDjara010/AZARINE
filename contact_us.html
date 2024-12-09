@@ -1,156 +1,506 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Azarine.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<html lang="id">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us</title>
 
-</head>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-<body>
-    <header>
-        <div class="nav-left">
-            <a href="index.html">HOME</a>
-            <a href="biodata.html">Biodata</a>
-            <a href="contact_us.html">Contact Us</a>
-        </div>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
 
-        <div class="Logo-brand">
-            <img src="AzarinLogo.webp" alt="Brand Logo">
-        </div> 
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-        <div class="nav-right">
-            <strong><a href="favoriteQuotes.html">Favorite Quotes</a></strong>
-            <i class="fa fa-search"></i>
-            <img src="at.png" alt="at">
-            <select class="language-select">
+    <style>
+        header {
+        justify-content: space-between;
+        font-size: 21px;
+        padding: 15px 40px;
+      }
+
+      footer {
+        background-color: #1c1c1c;
+        color: #fff;
+        padding: 2rem 0;
+      }
+
+      /* Footer Link Hover */
+      footer a:hover {
+        color: #bfa563;
+      }
+
+      /* Social Link Hover */
+      footer .fab:hover {
+        color: #bfa563;
+      }
+
+      .divider {
+        height: 3px;
+        width: 100%;
+        display: block;
+        top: 0;
+        left: 0;
+        background-size: cover;
+        position: static;
+        background: linear-gradient(to right, #7d682f, #baa46c);
+      }
+
+      @keyframes pulseAnimation {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1.2);
+        }
+      }
+
+      .pulse-animate {
+        animation: pulseAnimation 2.3s alternate infinite ease-in;
+        display: block;
+        height: auto;
+        margin-bottom: 3rem;
+      }
+    </style>
+  </head>
+  <body class="bg-white-100">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between items-center h-16">
+            <nav class="hidden md:flex space-x-8">
+              <a
+                href="index.html"
+                class="font-bold hover:text-amber-700 transition duration-300"
+              >
+                HOME
+              </a>
+              <a
+                href="biodata.html"
+                class="font-bold hover:text-amber-700 transition duration-300"
+              >
+                Biodata
+              </a>
+              <a
+                href="contact_us.html"
+                class="font-bold hover:text-amber-700 transition duration-300"
+              >
+                Contact Us
+              </a>
+            </nav>
+  
+            <div class="md:hidden">
+              <button class="text-2xl p-2 rounded-md hover:bg-gray-100">
+                <i class="fas fa-bars"></i>
+              </button>
+            </div>
+  
+            <div class="flex-shrink-0 flex items-center">
+              <img src="AzarinLogo.webp" alt="Brand Logo" class="h-8 w-auto" />
+            </div>
+  
+            <div class="hidden md:flex items-center space-x-6">
+              <a
+                href="favoriteQuotes.html"
+                class="font-bold hover:text-amber-700 transition duration-300"
+              >
+                Favorite Quotes
+              </a>
+
+              <a
+              href="posts.html"
+              class="font-bold hover:text-amber-700 transition duration-300"
+            >
+              Additional Page
+            </a>
+
+              <i class="fas fa-search hover:text-amber-700 cursor-pointer"></i>
+              <img src="at.png" alt="at" class="h-6" />
+              <select
+                class="text-sm border-none focus:ring-2 focus:ring-amber-500 rounded-md"
+              >
                 <option>ID</option>
                 <option>EN</option>
                 <option>VN</option>
                 <option>MY</option>
-            </select>
+              </select>
+            </div>
+          </div>
         </div>
-    </header>
+      </header>
 
-    <main class="contact">
-        <h1>Contact Us</h1> <br><br>
-        <form action="#" method="post">
-            <div class="form-group">
-                <label for="firstName">First Name:</label>
-                <input type="text" id="firstName" name="firstName" required>
+    <div class="min-h-screen py-6 flex flex-col justify-center sm:py-12">
+      <div class="relative py-3 sm:max-w-xl sm:mx-auto">
+        <div
+          class="relative px-4 py-10 bg-emerald-200 mx-8 md:mx-0 shadow rounded-3xl sm:p-10"
+        >
+          <div class="max-w-md mx-auto">
+            <div class="flex items-center space-x-5">
+              <div class="block pl-2 font-semibold text-xl text-gray-700">
+                <h2 class="leading-relaxed">Student Registration Form</h2>
+              </div>
             </div>
 
-            <div class="form-group">
-                <label for="familyName">Family Name:</label>
-                <input type="text" id="familyName" name="familyName" required>
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-
-            <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-
-            <div class="form-group">
-                <label>Gender:</label>
-                <div class="radio-group">
-                    <input type="radio" id="male" name="gender" value="male">
-                    <label for="male">Male</label>
-                    <input type="radio" id="female" name="gender" value="female">
-                    <label for="female">Female</label>
+            <form
+              id="registrationForm"
+              class="divide-y divide-gray-200"
+              onsubmit="return validateForm(event)"
+            >
+              <div class="py-8 space-y-4">
+                
+                <div>
+                  <label class="block text-sm font-medium text-gray-700"
+                    >Full Name</label
+                  >
+                  <input
+                    type="text"
+                    id="fullName"
+                    name="fullName"
+                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2 border"
+                  />
+                  <p
+                    class="hidden text-red-500 text-xs mt-1"
+                    id="fullNameError"
+                  >
+                  Full name must be filled
+                  </p>
                 </div>
-            </div>
 
-            <div class="form-group">
-                <label for="birthdate">Birthdate:</label>
-                <input type="date" id="birthdate" name="birthdate" required>
-            </div>
-
-            <div class="form-group">
-                <label for="religion">Religion:</label>
-                <select id="religion" name="religion" required>
-                    <option value="">Select Religion</option>
-                    <option value="islam">Islam</option>
-                    <option value="christianity">Christianity</option>
-                    <option value="hinduism">Hinduism</option>
-                    <option value="buddhism">Buddhism</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="address">Address:</label>
-                <textarea id="address" name="address" rows="4" required></textarea>
-            </div>
-
-            <div class="form-group">
-                <label>Hobbies:</label>
-                <div class="checkbox-group">
-                    <input type="checkbox" id="reading" name="hobbies" value="reading">
-                    <label for="reading">Reading</label>
-                    <input type="checkbox" id="sports" name="hobbies" value="sports">
-                    <label for="sports">Sports</label>
-                    <input type="checkbox" id="music" name="hobbies" value="music">
-                    <label for="music">Music</label>
-                    <input type="checkbox" id="gaming" name="hobbies" value="gaming">
-                    <label for="gaming">Gaming</label>
+                
+                <div>
+                  <label class="block text-sm font-medium text-gray-700"
+                    >Student ID (NIM)</label
+                  >
+                  <input
+                    type="text"
+                    id="studentId"
+                    name="studentId"
+                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2 border"
+                  />
+                  <p
+                    class="hidden text-red-500 text-xs mt-1"
+                    id="studentIdError"
+                  >
+                    Student ID (NIM) must be filled
+                  </p>
                 </div>
-            </div>
 
-            <button type="submit" value="Save">Save</button>
-        </form>
-    </main>
+                
+                <div>
+                  <label class="block text-sm font-medium text-gray-700"
+                    >Email Address </label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2 border"
+                  />
+                  <p class="hidden text-red-500 text-xs mt-1" id="emailError">
+                    Invalid Email
+                  </p>
+                </div>
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-column">
-                <ul>
-                    <li><a href="#">Story of Azarine</a></li>
-                    <li><a href="#">Be Our Reseller</a></li>
-                    <li><a href="#">Beauty Journals</a></li>
-                    <li><a href="#">Where To Buy</a></li>
-                    <li><a href="#">Quiz</a></li>
-                </ul>
-            </div>
+                
+                <div>
+                  <label class="block text-sm font-medium text-gray-700"> 
+                    Select Faculty/Major</label>
+                  <select
+                    id="faculty"
+                    name="faculty"
+                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2 border"
+                  >
+                    <option value="">Faculty/Major</option>
+                    <option value="FIK">Faculty of Nursing</option>
+                    <option value="FMIPA">Faculty of Mathematics and Natural Sciences</option>
+                    <option value="FTI">FFaculty of Information Technology</option>
+                    <option value="FE">Faculty of Economics</option>
+                    <option value="FFIL">Faculty of Philosophy</option>
+                    <option value="FKIP">Faculty of Teacher Training and Education</option>
+                  </select>
+                  <p class="hidden text-red-500 text-xs mt-1" id="facultyError">
+                    Select Faculty/Major
+                  </p>
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700"> 
+                    Date of Birth </label>
+                  <input
+                    type="date"
+                    id="dateOfBirth"
+                    name="dateOfBirth"
+                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2 border"
+                  />
+                  <p
+                    class="hidden text-red-500 text-xs mt-1"
+                    id="dateOfBirthError"
+                  >
+                  Date of Birth must be filled
+                </p>
+                  </p>
+                </div>
 
-            <div class="footer-logo">
-                <img src="Mask_Group__1___1___1_.webp" alt="Azarine Logo"> 
-            </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700"> 
+                    Gender
+                    </label>
+                  <div class="mt-2 space-x-6">
+                    <label class="inline-flex items-center">
+                      <input
+                        type="radio"
+                        name="gender"
+                        value="male"
+                        class="form-radio text-indigo-600"
+                      />
+                      <span class="ml-2">Male</span>
+                    </label>
+                    <label class="inline-flex items-center">
+                      <input
+                        type="radio"
+                        name="gender"
+                        value="female"
+                        class="form-radio text-indigo-600"
+                      />
+                      <span class="ml-2">Female</span>
+                    </label>
+                  </div>
+                  <p class="hidden text-red-500 text-xs mt-1" id="genderError">
+                    Select Gender
+                  </p>
+                </div>
 
-            <div class="footer-column">
-                <ul>
-                    <li><a href="#">#THEPOWERINYOU</a></li>
-                    <li><a href="https://fti.unai.edu/">FTI UNAI</a></li>
-                    <li><a href="https://unai.edu/">Situs Web UNAI</a></li>
-                    <li><a href="https://jurnal.unai.edu/index.php/teika">Jurnal Teika</a></li>
-                </ul>
-            </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700"
+                    >Address</label
+                  >
+                  <textarea
+                    id="address"
+                    name="address"
+                    rows="4"
+                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2 border"
+                  ></textarea>
+                  <p class="hidden text-red-500 text-xs mt-1" id="addressError">
+                    Alamat harus diisi
+                  </p>
+                </div>
+
+                <div>
+                  <label class="block text-sm font-medium text-gray-700"
+                    >Phone Number</label
+                  >
+                  <input
+                    type="text"
+                    id="phone"
+                    name="phone"
+                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2 border"
+                  />
+                  <p class="hidden text-red-500 text-xs mt-1" id="phoneError">
+                    Invalid Phone Number
+                  </p>
+                </div>
+              </div>
+
+              <div class="pt-4">
+                <button
+                  type="submit"
+                  class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-emerald-500 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
-    
-        <div class="social-links">
-            <i class="fa fa-facebook-f"></i>
-            <i class="fa fa-twitter"></i>
-            <i class="fa fa-instagram"></i>
-            <i class="fa fa-youtube"></i>
-            <i class="fa fa-tiktok"></i>
+      </div>
+    </div>
+
+    <script>
+      function validateForm(event) {
+        event.preventDefault();
+        let isValid = true;
+
+        // Reset semua error
+        document.querySelectorAll('p[id$="Error"]').forEach((error) => {
+          error.classList.add("hidden");
+        });
+
+        // Validasi Nama Lengkap
+        const fullName = document.getElementById("fullName").value.trim();
+        if (!fullName) {
+          document.getElementById("fullNameError").classList.remove("hidden");
+          isValid = false;
+        }
+
+        // Validasi NIM
+        const studentId = document.getElementById("studentId").value.trim();
+        if (!studentId) {
+          document.getElementById("studentIdError").classList.remove("hidden");
+          isValid = false;
+        }
+
+        // Validasi Email
+        const email = document.getElementById("email").value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!email || !emailRegex.test(email)) {
+          document.getElementById("emailError").classList.remove("hidden");
+          isValid = false;
+        }
+
+        // Validasi Fakultas
+        const faculty = document.getElementById("faculty").value;
+        if (!faculty) {
+          document.getElementById("facultyError").classList.remove("hidden");
+          isValid = false;
+        }
+
+        // Validasi Tanggal Lahir
+        const dateOfBirth = document.getElementById("dateOfBirth").value;
+        if (!dateOfBirth) {
+          document
+            .getElementById("dateOfBirthError")
+            .classList.remove("hidden");
+          isValid = false;
+        }
+
+        // Validasi Jenis Kelamin
+        const gender = document.querySelector('input[name="gender"]:checked');
+        if (!gender) {
+          document.getElementById("genderError").classList.remove("hidden");
+          isValid = false;
+        }
+
+        // Validasi Alamat
+        const address = document.getElementById("address").value.trim();
+        if (!address) {
+          document.getElementById("addressError").classList.remove("hidden");
+          isValid = false;
+        }
+
+        // Validasi Nomor Telepon
+        const phone = document.getElementById("phone").value.trim();
+        const phoneRegex = /^[0-9]{10,13}$/;
+        if (!phone || !phoneRegex.test(phone)) {
+          document.getElementById("phoneError").classList.remove("hidden");
+          isValid = false;
+        }
+
+        if (isValid) {
+          alert("Pendaftaran berhasil!");
+          document.getElementById("registrationForm").reset();
+        }
+
+        return isValid;
+      }
+
+      // Mencegah input selain angka pada nomor telepon
+      document.getElementById("phone").addEventListener("input", function (e) {
+        this.value = this.value.replace(/[^0-9]/g, "");
+      });
+    </script>
+
+<footer class="bg-black py-20">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+          <!-- Left Column -->
+          <div class="text-white space-y-3 text-lg">
+            <a
+              href="#"
+              class="block hover:text-amber-500 transition duration-300"
+              >Story of Azarine</a
+            >
+            <a
+              href="#"
+              class="block hover:text-amber-500 transition duration-300"
+              >Be Our Reseller</a
+            >
+            <a
+              href="#"
+              class="block hover:text-amber-500 transition duration-300"
+              >Beauty Journals</a
+            >
+            <a
+              href="#"
+              class="block hover:text-amber-500 transition duration-300"
+              >Quiz</a
+            >
+          </div>
+
+          <!-- Center Logo -->
+          <div class="flex justify-center">
+            <img
+              src="Mask_Group__1___1___1_.webp"
+              alt="Azarine Logo"
+              class="h-12 pulse-animate"
+            />
+          </div>
+
+          <!-- Right Column -->
+          <div class="text-white">
+            <ul class="space-y-3 text-right">
+              <li>
+                <a href="#" class="hover:text-amber-500 transition duration-300"
+                  >#THEPOWERINYOU</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://fti.unai.edu/"
+                  class="hover:text-amber-500 transition duration-300"
+                  >FTI UNAI</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://unai.edu/"
+                  class="hover:text-amber-500 transition duration-300"
+                  >Situs Web UNAI</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://jurnal.unai.edu/index.php/teika"
+                  class="hover:text-amber-500 transition duration-300"
+                  >Jurnal Teika</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
-    
-        <div class="footer-bottom">
-            <p>Copyright © 2024 Azarine Cosmetic, Privacy & Terms</p>
-            <p>Web Design & Development by LiberlyDjara</p>
+
+        <!-- Social Links -->
+        <div class="flex justify-center space-x-8 mt-12 text-2xl text-white">
+          <a href="#" class="hover:text-amber-500 transition duration-300"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="#" class="hover:text-amber-500 transition duration-300"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="#" class="hover:text-amber-500 transition duration-300"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="#" class="hover:text-amber-500 transition duration-300"
+            ><i class="fab fa-youtube"></i
+          ></a>
+          <a href="#" class="hover:text-amber-500 transition duration-300"
+            ><i class="fab fa-tiktok"></i
+          ></a>
         </div>
+
+        <!-- Footer Bottom -->
+        <div class="text-center mt-12 text-white text-sm">
+          <p class="mb-2">Copyright © 2024 Azarine Cosmetic, Privacy & Terms</p>
+          <p>Web Design & Development by LiberlyDjara.</p>
+        </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
